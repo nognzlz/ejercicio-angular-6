@@ -1,0 +1,34 @@
+<form (ngSubmit)="onSubmit()">
+  <div>
+      <label for="nombre">Nombre: </label>
+      <input name="nombre" type="text" [(ngModel)]="producto.nombre">
+  </div>
+  <div>
+      <label for="detalle">Detalle: </label>
+      <input name="detalle" type="text" [(ngModel)]="producto.detalle">
+  </div>
+  <div>
+      <label for="cantidad">Cantidad: </label>
+      <input name="cantidad" type="text" [(ngModel)]="producto.cantidad">
+  </div>
+  <br>
+  <div>
+    <button type="submit">Agregar</button>
+  </div>
+</form>
+
+<br>
+<br>
+
+<table>
+  <tr>
+      <th>Nombre</th>
+      <th>Detalle</th>
+      <th>Cantidad</th>
+  </tr>
+  <tr *ngFor="let prod of productos">
+    <td>{{prod.nombre}}</td>
+    <td>{{prod.detalle}}</td>
+    <td>{{prod.cantidad}}</td>
+  </tr>
+</table>
